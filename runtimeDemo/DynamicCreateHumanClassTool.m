@@ -68,7 +68,7 @@ BOOL createClass() {
     
     // 3、增加方法
     
-    class_addMethod(MyClass, kHuMan_sayHello_sel, (IMP)sayHello, "V@:");
+    class_addMethod(MyClass, kHuMan_sayHello_sel, (IMP)sayHello, "@@:@");
     // 通过如下方式，可以避免编译器警告
     /*
      

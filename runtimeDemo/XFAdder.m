@@ -24,7 +24,7 @@
     
     if (sel == sel_getUid("addTwo:")) {
         Class metaClass = objc_getMetaClass(class_getName([self class]));
-        class_addMethod(metaClass, sel, (IMP)addTwo, "V@:");
+        class_addMethod(metaClass, sel, (IMP)addTwo, "@@:@");
         return YES;
     }
     return [super resolveClassMethod:sel];
@@ -32,13 +32,15 @@
 
 + (BOOL)resolveInstanceMethod:(SEL)sel {
     if (sel == sel_getUid("addThree:")) {
-        class_addMethod([self class], sel, (IMP)addThree, "V@:");
+        class_addMethod([self class], sel, (IMP)addThree, "@@:@");
         return YES;
     }
  
     
     return [super resolveInstanceMethod:sel];
 }
+
+
 
 // (id _Nonnull, SEL _Nonnull, ...
 

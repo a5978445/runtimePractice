@@ -13,8 +13,10 @@
 #import <objc/runtime.h>
 #import <objc/message.h>
 
-
+//#import <objc/objc-load.h >
+// objc/objc-load.h , objc_loadModules
 #import "XFAdder.h"
+#import "XFAdderForwardInvocation.h"
 
 
 @interface ViewController ()
@@ -42,6 +44,11 @@
     
    NSUInteger result = (NSUInteger)objc_msgSend([XFAdder class], sel_getUid("addTwo:"),12);
     
+ //   NSUInteger other = (NSUInteger)objc_msgSend([[XFAdderForwardInvocation alloc]init], sel_getUid("addThree:"),12);
+    XFAdderForwardInvocation *aAdderForwardInvocation = [[XFAdderForwardInvocation alloc]init];
+    NSUInteger other = [aAdderForwardInvocation addThree:12];
+    
+    assert(![aAdderForwardInvocation respondsToSelector:@selector(addThree:)]);
     
     NSLog(@"%@",[NSObject class]);
     NSLog(@"%@",objc_getMetaClass("NSObject"));

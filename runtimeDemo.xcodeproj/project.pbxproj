@@ -21,6 +21,8 @@
 		141385ED2117E4E90053033B /* XFAdder.m in Sources */ = {isa = PBXBuildFile; fileRef = 141385EC2117E4E90053033B /* XFAdder.m */; };
 		141385F02117E5AC0053033B /* GetMessageAddressTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 141385EF2117E5AC0053033B /* GetMessageAddressTests.m */; };
 		141385F32117F05A0053033B /* ResolveMethodTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 141385F22117F05A0053033B /* ResolveMethodTests.m */; };
+		141385F6211826DB0053033B /* XFAdderForwardInvocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 141385F5211826DB0053033B /* XFAdderForwardInvocation.m */; };
+		141385F9211833420053033B /* ForwardInvocationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 141385F8211833420053033B /* ForwardInvocationTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,9 @@
 		141385EC2117E4E90053033B /* XFAdder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XFAdder.m; sourceTree = "<group>"; };
 		141385EF2117E5AC0053033B /* GetMessageAddressTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetMessageAddressTests.m; sourceTree = "<group>"; };
 		141385F22117F05A0053033B /* ResolveMethodTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResolveMethodTests.m; sourceTree = "<group>"; };
+		141385F4211826DB0053033B /* XFAdderForwardInvocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XFAdderForwardInvocation.h; sourceTree = "<group>"; };
+		141385F5211826DB0053033B /* XFAdderForwardInvocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XFAdderForwardInvocation.m; sourceTree = "<group>"; };
+		141385F8211833420053033B /* ForwardInvocationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForwardInvocationTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +128,8 @@
 				141159DF2115404200A18DDB /* ViewController.m */,
 				141385EB2117E4E90053033B /* XFAdder.h */,
 				141385EC2117E4E90053033B /* XFAdder.m */,
+				141385F4211826DB0053033B /* XFAdderForwardInvocation.h */,
+				141385F5211826DB0053033B /* XFAdderForwardInvocation.m */,
 				14115A112116929700A18DDB /* DynamicCreateHumanClassTool.h */,
 				14115A102116929700A18DDB /* DynamicCreateHumanClassTool.m */,
 				141159E12115404200A18DDB /* Main.storyboard */,
@@ -141,6 +148,7 @@
 				14115A142116976400A18DDB /* DynamicCreateHumanClassTests.m */,
 				141385EF2117E5AC0053033B /* GetMessageAddressTests.m */,
 				141385F22117F05A0053033B /* ResolveMethodTests.m */,
+				141385F8211833420053033B /* ForwardInvocationTests.m */,
 				141159F62115404400A18DDB /* Info.plist */,
 			);
 			path = runtimeDemoTests;
@@ -295,6 +303,7 @@
 			files = (
 				141159E02115404200A18DDB /* ViewController.m in Sources */,
 				141159EB2115404400A18DDB /* main.m in Sources */,
+				141385F6211826DB0053033B /* XFAdderForwardInvocation.m in Sources */,
 				14115A122116929800A18DDB /* DynamicCreateHumanClassTool.m in Sources */,
 				141385ED2117E4E90053033B /* XFAdder.m in Sources */,
 				141159DD2115404200A18DDB /* AppDelegate.m in Sources */,
@@ -307,6 +316,7 @@
 			files = (
 				141385F02117E5AC0053033B /* GetMessageAddressTests.m in Sources */,
 				14115A152116976400A18DDB /* DynamicCreateHumanClassTests.m in Sources */,
+				141385F9211833420053033B /* ForwardInvocationTests.m in Sources */,
 				141159F52115404400A18DDB /* runtimeDemoTests.m in Sources */,
 				141385F32117F05A0053033B /* ResolveMethodTests.m in Sources */,
 			);
