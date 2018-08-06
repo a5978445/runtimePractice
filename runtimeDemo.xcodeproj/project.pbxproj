@@ -20,6 +20,7 @@
 		14115A152116976400A18DDB /* DynamicCreateHumanClassTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 14115A142116976400A18DDB /* DynamicCreateHumanClassTests.m */; };
 		141385ED2117E4E90053033B /* XFAdder.m in Sources */ = {isa = PBXBuildFile; fileRef = 141385EC2117E4E90053033B /* XFAdder.m */; };
 		141385F02117E5AC0053033B /* GetMessageAddressTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 141385EF2117E5AC0053033B /* GetMessageAddressTests.m */; };
+		141385F32117F05A0053033B /* ResolveMethodTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 141385F22117F05A0053033B /* ResolveMethodTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		141385EB2117E4E90053033B /* XFAdder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XFAdder.h; sourceTree = "<group>"; };
 		141385EC2117E4E90053033B /* XFAdder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XFAdder.m; sourceTree = "<group>"; };
 		141385EF2117E5AC0053033B /* GetMessageAddressTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetMessageAddressTests.m; sourceTree = "<group>"; };
+		141385F22117F05A0053033B /* ResolveMethodTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResolveMethodTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 				141159F42115404400A18DDB /* runtimeDemoTests.m */,
 				14115A142116976400A18DDB /* DynamicCreateHumanClassTests.m */,
 				141385EF2117E5AC0053033B /* GetMessageAddressTests.m */,
+				141385F22117F05A0053033B /* ResolveMethodTests.m */,
 				141159F62115404400A18DDB /* Info.plist */,
 			);
 			path = runtimeDemoTests;
@@ -305,6 +308,7 @@
 				141385F02117E5AC0053033B /* GetMessageAddressTests.m in Sources */,
 				14115A152116976400A18DDB /* DynamicCreateHumanClassTests.m in Sources */,
 				141159F52115404400A18DDB /* runtimeDemoTests.m in Sources */,
+				141385F32117F05A0053033B /* ResolveMethodTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,7 +406,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -454,7 +458,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -505,6 +509,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F8ML633GQS;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = runtimeDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -524,6 +529,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F8ML633GQS;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = runtimeDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -7,7 +7,7 @@
 
 #define kHuMan  "XFHuMan"
 #define KHuMan_name  "name"
-#define kHuMan_sayHello_sel @selector(sayHello:)
+#define kHuMan_sayHello_sel sel_getUid("sayHello:")
 
 
 #import <Foundation/Foundation.h>

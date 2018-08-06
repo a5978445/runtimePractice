@@ -68,8 +68,6 @@ BOOL createClass() {
     
     // 3、增加方法
     
-    SEL sayHelloSel = sel_getUid("sayHello:");
-    
     class_addMethod(MyClass, kHuMan_sayHello_sel, (IMP)sayHello, "V@:");
     // 通过如下方式，可以避免编译器警告
     /*
