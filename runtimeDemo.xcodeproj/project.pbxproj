@@ -18,6 +18,8 @@
 		14115A0F2115444900A18DDB /* libobjc.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 14115A0E2115444900A18DDB /* libobjc.tbd */; };
 		14115A122116929800A18DDB /* DynamicCreateHumanClassTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 14115A102116929700A18DDB /* DynamicCreateHumanClassTool.m */; };
 		14115A152116976400A18DDB /* DynamicCreateHumanClassTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 14115A142116976400A18DDB /* DynamicCreateHumanClassTests.m */; };
+		141385ED2117E4E90053033B /* XFAdder.m in Sources */ = {isa = PBXBuildFile; fileRef = 141385EC2117E4E90053033B /* XFAdder.m */; };
+		141385F02117E5AC0053033B /* GetMessageAddressTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 141385EF2117E5AC0053033B /* GetMessageAddressTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,9 @@
 		14115A102116929700A18DDB /* DynamicCreateHumanClassTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicCreateHumanClassTool.m; sourceTree = "<group>"; };
 		14115A112116929700A18DDB /* DynamicCreateHumanClassTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicCreateHumanClassTool.h; sourceTree = "<group>"; };
 		14115A142116976400A18DDB /* DynamicCreateHumanClassTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DynamicCreateHumanClassTests.m; sourceTree = "<group>"; };
+		141385EB2117E4E90053033B /* XFAdder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XFAdder.h; sourceTree = "<group>"; };
+		141385EC2117E4E90053033B /* XFAdder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XFAdder.m; sourceTree = "<group>"; };
+		141385EF2117E5AC0053033B /* GetMessageAddressTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetMessageAddressTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +119,8 @@
 				141159DC2115404200A18DDB /* AppDelegate.m */,
 				141159DE2115404200A18DDB /* ViewController.h */,
 				141159DF2115404200A18DDB /* ViewController.m */,
+				141385EB2117E4E90053033B /* XFAdder.h */,
+				141385EC2117E4E90053033B /* XFAdder.m */,
 				14115A112116929700A18DDB /* DynamicCreateHumanClassTool.h */,
 				14115A102116929700A18DDB /* DynamicCreateHumanClassTool.m */,
 				141159E12115404200A18DDB /* Main.storyboard */,
@@ -130,6 +137,7 @@
 			children = (
 				141159F42115404400A18DDB /* runtimeDemoTests.m */,
 				14115A142116976400A18DDB /* DynamicCreateHumanClassTests.m */,
+				141385EF2117E5AC0053033B /* GetMessageAddressTests.m */,
 				141159F62115404400A18DDB /* Info.plist */,
 			);
 			path = runtimeDemoTests;
@@ -285,6 +293,7 @@
 				141159E02115404200A18DDB /* ViewController.m in Sources */,
 				141159EB2115404400A18DDB /* main.m in Sources */,
 				14115A122116929800A18DDB /* DynamicCreateHumanClassTool.m in Sources */,
+				141385ED2117E4E90053033B /* XFAdder.m in Sources */,
 				141159DD2115404200A18DDB /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				141385F02117E5AC0053033B /* GetMessageAddressTests.m in Sources */,
 				14115A152116976400A18DDB /* DynamicCreateHumanClassTests.m in Sources */,
 				141159F52115404400A18DDB /* runtimeDemoTests.m in Sources */,
 			);
