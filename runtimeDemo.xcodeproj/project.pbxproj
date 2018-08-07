@@ -24,6 +24,7 @@
 		141385F6211826DB0053033B /* XFAdderForwardInvocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 141385F5211826DB0053033B /* XFAdderForwardInvocation.m */; };
 		141385F9211833420053033B /* ForwardInvocationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 141385F8211833420053033B /* ForwardInvocationTests.m */; };
 		141385FC21183EA40053033B /* XFADModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 141385FB21183EA40053033B /* XFADModel.m */; };
+		141385FF21198C620053033B /* DynamicAddPropertyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 141385FE21198C620053033B /* DynamicAddPropertyTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		141385F8211833420053033B /* ForwardInvocationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForwardInvocationTests.m; sourceTree = "<group>"; };
 		141385FA21183EA40053033B /* XFADModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFADModel.h; sourceTree = "<group>"; };
 		141385FB21183EA40053033B /* XFADModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFADModel.m; sourceTree = "<group>"; };
+		141385FE21198C620053033B /* DynamicAddPropertyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DynamicAddPropertyTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 				141385EF2117E5AC0053033B /* GetMessageAddressTests.m */,
 				141385F22117F05A0053033B /* ResolveMethodTests.m */,
 				141385F8211833420053033B /* ForwardInvocationTests.m */,
+				141385FE21198C620053033B /* DynamicAddPropertyTests.m */,
 				141159F62115404400A18DDB /* Info.plist */,
 			);
 			path = runtimeDemoTests;
@@ -320,6 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				141385FF21198C620053033B /* DynamicAddPropertyTests.m in Sources */,
 				141385F02117E5AC0053033B /* GetMessageAddressTests.m in Sources */,
 				14115A152116976400A18DDB /* DynamicCreateHumanClassTests.m in Sources */,
 				141385F9211833420053033B /* ForwardInvocationTests.m in Sources */,

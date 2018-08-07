@@ -59,7 +59,7 @@ BOOL createClass() {
     Class MyClass = objc_allocateClassPair([NSObject class], kHuMan , 0);
     
 
-    BOOL isSuccess = class_addIvar(MyClass, KHuMan_name , sizeof(NSString *), 64, "@,&,N,Vname");
+    BOOL isSuccess = class_addIvar(MyClass, KHuMan_name , sizeof(NSString *), 64, "@");
    // class_addIvar(MyClass, "justTest" , sizeof(NSString *), 64, "@");
     if (!isSuccess) {
         NSLog(@"add %s property failure",KHuMan_name);

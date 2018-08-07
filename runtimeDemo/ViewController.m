@@ -29,20 +29,39 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    return;
     // Do any additional setup after loading the view, typically from a nib.
+    
+    NSString *hello = @"hello world";
+    NSLog(@"%@", hello.capitalizedString);
+    
     unsigned int count;
     objc_property_t *objc_property_t_list = class_copyPropertyList([XFADModel class], &count);
     XFADModel *aADModel = [[XFADModel alloc]init];
+    [aADModel performSelector:@selector(setAd_id:) withObject:@"hhhhhhhhh"];
+    NSString *result = [aADModel performSelector:@selector(ad_id)];
+    
+    [aADModel performSelector:@selector(helloWorld)];
+    
+    assert([result isEqualToString:@"hhhhhhhhh"]);
     
     // to do support super class KVC
     for (int i = 0; i < count; i++) {
         const char *property_name = property_getName(objc_property_t_list[i]);
+        
+        NSString *middle = [NSString stringWithFormat:@"%s", property_name];
+        NSString *firstChar = [middle substringWithRange:NSMakeRange(0, 1)].uppercaseString;
+        middle = [middle stringByReplacingCharactersInRange:NSMakeRange(0, 1) withString:firstChar];
+        
+        NSString *property_name_string = [NSString stringWithFormat:@"set%@:", middle];
         printf("%s: %s\n",property_name,property_getAttributes(objc_property_t_list[i]));
+        //   property_name_string.lowercaseString
         
         
         
-        
-        [aADModel setValue:@"hello" forKey:[NSString stringWithCString:property_name encoding:NSUTF8StringEncoding]];
+        //  [aADModel setValue:@"hello" forKey:[NSString stringWithCString:property_name encoding:NSUTF8StringEncoding]];
+       // [aADModel setAd_height:@"asad"];
+        [aADModel performSelector:sel_getUid(property_name_string.cString) withObject:@"hello"];
         
     }
     
@@ -62,6 +81,12 @@
     
     
     objc_property_t objc_property_t_HuMan_name = class_getProperty(HuMan, KHuMan_name);
+    NSLog(@"%s", property_getAttributes(objc_property_t_HuMan_name));
+ //   property_getName(<#objc_property_t  _Nonnull property#>)
+    
+    
+    
+
     NSLog(@"%s", property_getAttributes(objc_property_t_HuMan_name));
     
     
