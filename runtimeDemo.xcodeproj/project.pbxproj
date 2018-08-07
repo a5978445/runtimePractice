@@ -23,6 +23,7 @@
 		141385F32117F05A0053033B /* ResolveMethodTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 141385F22117F05A0053033B /* ResolveMethodTests.m */; };
 		141385F6211826DB0053033B /* XFAdderForwardInvocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 141385F5211826DB0053033B /* XFAdderForwardInvocation.m */; };
 		141385F9211833420053033B /* ForwardInvocationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 141385F8211833420053033B /* ForwardInvocationTests.m */; };
+		141385FC21183EA40053033B /* XFADModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 141385FB21183EA40053033B /* XFADModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,8 @@
 		141385F4211826DB0053033B /* XFAdderForwardInvocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XFAdderForwardInvocation.h; sourceTree = "<group>"; };
 		141385F5211826DB0053033B /* XFAdderForwardInvocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XFAdderForwardInvocation.m; sourceTree = "<group>"; };
 		141385F8211833420053033B /* ForwardInvocationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForwardInvocationTests.m; sourceTree = "<group>"; };
+		141385FA21183EA40053033B /* XFADModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFADModel.h; sourceTree = "<group>"; };
+		141385FB21183EA40053033B /* XFADModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFADModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +133,8 @@
 				141385EC2117E4E90053033B /* XFAdder.m */,
 				141385F4211826DB0053033B /* XFAdderForwardInvocation.h */,
 				141385F5211826DB0053033B /* XFAdderForwardInvocation.m */,
+				141385FA21183EA40053033B /* XFADModel.h */,
+				141385FB21183EA40053033B /* XFADModel.m */,
 				14115A112116929700A18DDB /* DynamicCreateHumanClassTool.h */,
 				14115A102116929700A18DDB /* DynamicCreateHumanClassTool.m */,
 				141159E12115404200A18DDB /* Main.storyboard */,
@@ -302,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				141159E02115404200A18DDB /* ViewController.m in Sources */,
+				141385FC21183EA40053033B /* XFADModel.m in Sources */,
 				141159EB2115404400A18DDB /* main.m in Sources */,
 				141385F6211826DB0053033B /* XFAdderForwardInvocation.m in Sources */,
 				14115A122116929800A18DDB /* DynamicCreateHumanClassTool.m in Sources */,
