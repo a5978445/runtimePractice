@@ -17,6 +17,11 @@
     NSString *_ad_id;
 }
 
+- (void)setAd_name:(NSString *)ad_name {
+    NSLog(@"setAd_name:");
+    _ad_name = [ad_name copy];
+}
+
 + (void)load {
     
     objc_property_attribute_t type = { "T", "@\"NSString\"" };

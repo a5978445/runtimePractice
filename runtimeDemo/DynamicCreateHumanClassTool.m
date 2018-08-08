@@ -49,7 +49,7 @@ NSString * sayHello(id self, SEL _cmd, NSString *name);
 
 // 这个函数最好传个 NSError ** ,用来反馈具体错误信息
 // 这里就不写了，以log 的方式表达
-BOOL createClass() {
+BOOL registerHuManClass() {
     
     if (objc_lookUpClass(kHuMan) != NULL) {
         NSLog(@"exist %s class", kHuMan);
@@ -59,10 +59,10 @@ BOOL createClass() {
     Class MyClass = objc_allocateClassPair([NSObject class], kHuMan , 0);
     
 
-    BOOL isSuccess = class_addIvar(MyClass, KHuMan_name , sizeof(NSString *), 64, "@");
+    BOOL isSuccess = class_addIvar(MyClass, kHuMan_name , sizeof(NSString *), log2(sizeof(NSString *)), "@");
    // class_addIvar(MyClass, "justTest" , sizeof(NSString *), 64, "@");
     if (!isSuccess) {
-        NSLog(@"add %s property failure",KHuMan_name);
+        NSLog(@"add %s property failure",kHuMan_name);
         return NO;
     }
    
@@ -103,7 +103,7 @@ void disposeClass() {
 NSString * sayHello(id self, SEL _cmd, NSString *name) {
     
     // 获取类中指定名称实例成员变量的信息
-    Ivar ivar = class_getInstanceVariable([self class], KHuMan_name);
+    Ivar ivar = class_getInstanceVariable([self class], kHuMan_name);
     
     // 获取整个成员变量列表
     //   Ivar * class_copyIvarList ( Class cls, unsigned intint * outCount );

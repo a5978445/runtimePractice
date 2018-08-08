@@ -6,7 +6,7 @@
 //  Copyright © 2018年 李腾芳. All rights reserved.
 
 #define kHuMan  "XFHuMan"
-#define KHuMan_name  "name"
+#define kHuMan_name  "name"
 #define kHuMan_sayHello_sel sel_getUid("sayHello:")
 
 
@@ -15,6 +15,6 @@
 
 
 
-extern BOOL createClass(void);
+extern BOOL registerHuManClass(void);
 extern void disposeClass(void);
 extern void test(void);

@@ -10,7 +10,7 @@
 
 @interface XFADModel : NSObject
 @property(copy, nonatomic, setter = settingAd_height:) NSString *ad_height;
-@property(strong,nonatomic) NSString *ad_name;
+@property(strong, nonatomic) NSString *ad_name;
 @property(strong,nonatomic) NSString *ad_pic;
 @property(strong,nonatomic) NSString *ad_type;
 @property(strong,nonatomic) NSString *ad_type_id;

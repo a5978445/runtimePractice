@@ -19,7 +19,7 @@
 - (void)setUp {
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
-    createClass();
+    registerHuManClass();
 }
 
 - (void)tearDown {
@@ -29,10 +29,10 @@
     disposeClass();
 }
 
-- (void)testCreateClass {
+- (void)testregisterHuManClass {
     disposeClass();
-    assert(createClass() == YES);
-    assert(createClass() == NO);
+    assert(registerHuManClass() == YES);
+    assert(registerHuManClass() == NO);
     
 }
 
@@ -40,9 +40,9 @@
     Class huManClass = objc_lookUpClass(kHuMan);
     assert(huManClass != NULL);
     id aHuMan = [[huManClass alloc]init];
-    [aHuMan setValue:@"Fitch" forKey:@KHuMan_name];
+    [aHuMan setValue:@"Fitch" forKey:@kHuMan_name];
     
-    assert([[aHuMan valueForKey:@KHuMan_name] isEqual:@"Fitch"]);
+    assert([[aHuMan valueForKey:@kHuMan_name] isEqual:@"Fitch"]);
 }
 
 - (void)testDisposeClass {
@@ -67,7 +67,7 @@
      
      */
     id aHuMan = [[huManClass alloc]init];
-    [aHuMan setValue:@"Fitch" forKey:@KHuMan_name];
+    [aHuMan setValue:@"Fitch" forKey:@kHuMan_name];
     
     //equivalent:
     //objc_msgSend(myobjc, @selector(addMethodForMyClass:), @"hello boy");
