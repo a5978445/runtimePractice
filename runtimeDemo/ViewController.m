@@ -12,6 +12,7 @@
 #import <objc/objc.h>
 #import <objc/runtime.h>
 #import <objc/message.h>
+#include <stdio.h>
 
 //#import <objc/objc-load.h >
 // objc/objc-load.h , objc_loadModules
@@ -28,6 +29,27 @@
 
 @implementation ViewController
 
+// method swizzle
++ (void)load {
+    Method customViewDidLoad = class_getInstanceMethod(self, @selector(customViewDidLoad));
+    Method viewDidload = class_getInstanceMethod(self,@selector(viewDidLoad));
+    
+    method_exchangeImplementations(customViewDidLoad, viewDidload);
+}
+
+//- (void)hake:(NSString *)hake {
+//    
+//}
+
+//- (void)hake:(int)hake {
+//
+//}
+
+- (void)customViewDidLoad {
+    NSLog(@"customViewDidLoad");
+    [self customViewDidLoad];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -35,8 +57,21 @@
     NSLog(@"%zu", class_getInstanceSize([XFADModel class]));
     
     XFADModel *aModel = [[XFADModel alloc]init];
+    XFADModel *bModel = [[XFADModel alloc]init];
+    
+    
+ //   [XFADModel poseAsClass:[NSObject class]];
+    
+    [aModel addObserver:aModel forKeyPath:@"ad_name" options:NSKeyValueObservingOptionNew context:nil];
+    
+    NSLog(@"%@", object_getClass(aModel));
+    NSLog(@"%@", object_getClass(bModel));
+    
     [aModel setDate:@"1921-0305 14:12"];
     
+//    class_getMethodImplementation(<#Class  _Nullable __unsafe_unretained cls#>, <#SEL  _Nonnull name#>)
+//
+//    method_exchangeImplementations(<#Method  _Nonnull m1#>, <#Method  _Nonnull m2#>)
     
     NSLog(@"%zu", class_getInstanceSize([XFADModel class]));
     
@@ -48,6 +83,9 @@
     [tool test];
     
 
+    unsigned int count;
+    Method *methodList = class_copyMethodList([self class], &count);
+   // method_get
     
 
  
@@ -68,7 +106,16 @@
 
 }
 
+//- (void)setTitle:(NSString *)title {
+//    [self willChangeValueForKey:@""];
+//    // set
+//    [self didChangeValueForKey:@""];
+//
+//}
 
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    
+}
 
 
 

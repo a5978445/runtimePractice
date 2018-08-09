@@ -54,7 +54,7 @@
     id human_isYoung = [aHumanObject valueForKey:@kHuman_isYoung];
     
     //   sleep(2);
-    
+
     Ivar aIvar_HuMan_name = class_getInstanceVariable(Human, kHuMan_name);
     NSString *result_of_find_ivar = object_getIvar(aHumanObject, aIvar_HuMan_name);
     

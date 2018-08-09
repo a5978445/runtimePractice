@@ -43,6 +43,7 @@
 //    }
     
     
+
     if (!class_addProperty(self, "ad_id", attrs, 3)) {
         
         NSLog(@"add property failure");

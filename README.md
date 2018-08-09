@@ -3,12 +3,10 @@ this is a runtime particle program
 
 
 ##TODO
-1. 动态添加类方法，类成员变量
+
 
 
 3. 研究protocol 相关的方法
-
-6. 利用kvc初始化对象
 
 
 ##complete
@@ -20,6 +18,7 @@ this is a runtime particle program
 [Objective-C Associated Objects 的实现原理](http://blog.leichunfeng.com/blog/2015/06/26/objective-c-associated-objects-implementation-principle/)
 4. 撰写ivar 与内存相关的文章
 5. 研究 ivar与  property、kvc之间的关系 （进一步剖析和理解ivar， property）
+1. 动态添加类方法
 
 
 
