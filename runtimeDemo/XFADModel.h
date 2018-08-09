@@ -16,4 +16,13 @@
 @property(strong,nonatomic) NSString *ad_type_id;
 @property(strong,nonatomic) NSString *ad_url;
 @property(strong,nonatomic) NSString *ad_width;
+
+
+
+//@property(strong,nonatomic) NSString *ad_date;
+- (void)setDate:(NSString *)date;
+- (NSString *)date;
+
+
+
 @end

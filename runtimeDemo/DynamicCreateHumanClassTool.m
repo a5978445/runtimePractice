@@ -50,6 +50,7 @@
 
 // 函数声明
 NSString * sayHello(id self, SEL _cmd, NSString *name);
+NSString *customDescription(id self, SEL _cmd);
 
 // 这个函数最好传个 NSError ** ,用来反馈具体错误信息
 // 这里就不写了，以log 的方式表达
@@ -63,6 +64,8 @@ BOOL registerHuManClass() {
     Class MyClass = objc_allocateClassPair([NSObject class], kHuMan , 0);
     
 
+    // The class must not be a metaclass
+    // 无法为元类动态添加属性
     BOOL isSuccess = class_addIvar(MyClass, kHuMan_name , sizeof(NSString *), log2(sizeof(NSString *)), "@");
     if (!isSuccess) {
         NSLog(@"add %s property failure",kHuMan_name);
@@ -82,22 +85,25 @@ BOOL registerHuManClass() {
  
    
     
-    // 3、增加方法
-    
+    // 添加实例方法
+    //  type encode
+    // https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ObjCRuntimeGuide/Articles/ocrtTypeEncodings.html#//apple_ref/doc/uid/TP40008048-CH100-SW1
     class_addMethod(MyClass, kHuMan_sayHello_sel, (IMP)sayHello, "@@:@");
+
     
     assert(class_addProtocol(MyClass, objc_getProtocol("HuManProtocol")));
-    // 通过如下方式，可以避免编译器警告
-    /*
-     
-     SEL sayHelloSel = sel_getUid("sayHello:");
-     
-     class_addMethod(MyClass, sayHelloSel, (IMP)sayHello, "V@:");
-     
-     */
+  
 
     //注册这个类到runtime系统中就可以使用他了
     objc_registerClassPair(MyClass);
+    
+    // 添加类方法, 这个操作必须在 完成类注册之后做，
+    Class humanMetaClass = objc_getMetaClass(kHuMan);
+    isSuccess = class_addMethod(humanMetaClass, sel_getUid("customDescription"), (IMP)customDescription, "@@:");
+    if (!isSuccess) {
+        NSLog(@"failures");
+    }
+    
     return YES;
     
 
@@ -115,6 +121,9 @@ void disposeClass() {
 }
 
 
+NSString *customDescription(id self, SEL _cmd) {
+    return kHuMmanCLassCustomDescription;
+}
 
 //self和_cmd是必须的，在之后可以随意添加其他参数
 NSString * sayHello(id self, SEL _cmd, NSString *name) {

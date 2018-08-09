@@ -32,8 +32,22 @@
     [super viewDidLoad];
     
     
+    NSLog(@"%zu", class_getInstanceSize([XFADModel class]));
+    
+    XFADModel *aModel = [[XFADModel alloc]init];
+    [aModel setDate:@"1921-0305 14:12"];
+    
+    
+    NSLog(@"%zu", class_getInstanceSize([XFADModel class]));
+    
+    NSString *date = aModel.date;
+    NSLog(@"pl");
+    
+    
    HuManPropertyTool *tool = [[HuManPropertyTool alloc]init];
     [tool test];
+    
+
     
 
  

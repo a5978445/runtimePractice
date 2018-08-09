@@ -58,6 +58,15 @@
     
 }
 
+
+- (void)setDate:(NSString *)date {
+    objc_setAssociatedObject(self, "date", date, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+- (NSString *)date {
+    return objc_getAssociatedObject(self, "date");
+}
+
 void helloWorld(id self, SEL _cmd) {
     NSLog(@"helloWorld");
 }
@@ -79,6 +88,9 @@ void helloWorld(id self, SEL _cmd) {
     return [self valueForKey:@"ad_id"];
     
 }
+
+
+
 
 ////在目标target上添加属性，属性名propertyname，值value
 //+ (void)addPropertyWithtarget:(id)target withPropertyName:(NSString *)propertyName withValue:(id)value {

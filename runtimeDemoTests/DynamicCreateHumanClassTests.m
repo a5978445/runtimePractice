@@ -52,6 +52,12 @@
     assert(objc_lookUpClass(kHuMan) == NULL);
 }
 
+- (void)testHumanClass_customDescriptionSel {
+    Class huManClass = objc_lookUpClass(kHuMan);
+    assert(huManClass != NULL);
+    assert([[huManClass performSelector:@selector(customDescription)] isEqualToString:kHuMmanCLassCustomDescription]);
+}
+
 - (void)testHumanInstance_SayHelloSel {
     
     Class huManClass = objc_lookUpClass(kHuMan);

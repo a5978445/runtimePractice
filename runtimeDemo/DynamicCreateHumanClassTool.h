@@ -12,6 +12,8 @@
 
 #define kHuMan_sayHello_sel sel_getUid("sayHello:")
 
+#define kHuMmanCLassCustomDescription  @"this is human metal Class"
+
 
 #import <Foundation/Foundation.h>
 //#import <AppKit/AppKit.h>
