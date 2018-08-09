@@ -12,4 +12,7 @@
 
 - (NSUInteger)add:(NSUInteger)original;
 
+- (NSUInteger)subOne:(NSUInteger)original;
+- (NSUInteger)subTwo:(NSUInteger)original;
+
 @end

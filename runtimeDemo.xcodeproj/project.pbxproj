@@ -26,6 +26,7 @@
 		141385FC21183EA40053033B /* XFADModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 141385FB21183EA40053033B /* XFADModel.m */; };
 		141385FF21198C620053033B /* DynamicAddPropertyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 141385FE21198C620053033B /* DynamicAddPropertyTests.m */; };
 		14138602211AE8EF0053033B /* HuManPropertyTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 14138601211AE8EF0053033B /* HuManPropertyTool.m */; };
+		14138605211C368A0053033B /* DerivedClassTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 14138604211C368A0053033B /* DerivedClassTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		141385FE21198C620053033B /* DynamicAddPropertyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DynamicAddPropertyTests.m; sourceTree = "<group>"; };
 		14138600211AE8EF0053033B /* HuManPropertyTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HuManPropertyTool.h; sourceTree = "<group>"; };
 		14138601211AE8EF0053033B /* HuManPropertyTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HuManPropertyTool.m; sourceTree = "<group>"; };
+		14138604211C368A0053033B /* DerivedClassTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DerivedClassTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 				141385F8211833420053033B /* ForwardInvocationTests.m */,
 				141385FE21198C620053033B /* DynamicAddPropertyTests.m */,
 				141159F62115404400A18DDB /* Info.plist */,
+				14138604211C368A0053033B /* DerivedClassTests.m */,
 			);
 			path = runtimeDemoTests;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 			files = (
 				141385FF21198C620053033B /* DynamicAddPropertyTests.m in Sources */,
 				141385F02117E5AC0053033B /* GetMessageAddressTests.m in Sources */,
+				14138605211C368A0053033B /* DerivedClassTests.m in Sources */,
 				14115A152116976400A18DDB /* DynamicCreateHumanClassTests.m in Sources */,
 				141385F9211833420053033B /* ForwardInvocationTests.m in Sources */,
 				141159F52115404400A18DDB /* runtimeDemoTests.m in Sources */,

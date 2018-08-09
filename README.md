@@ -10,15 +10,29 @@ this is a runtime particle program
 
 
 ##complete
-1. dynamic create class , add instance class method and ivar , 
+1. dynamic create class , add instance class method and ivar , add class method 
 2. use `resolveInstanceMethod` and `resolveClassMethod` dynamic add class method
 3. use `forwardInvocation` realize dynamic message forwarding
 
-2. 研究 objc_setAssociatedObject对类内存大小的影响
+4. about objc_setAssociatedObject method
+内部存在一个hash biao ,类似于这样
+{
+   object: {
+   
+   				key : Association
+   			}
+
+}
+
+Association(ploicy, value)
+
 [Objective-C Associated Objects 的实现原理](http://blog.leichunfeng.com/blog/2015/06/26/objective-c-associated-objects-implementation-principle/)
-4. 撰写ivar 与内存相关的文章
-5. 研究 ivar与  property、kvc之间的关系 （进一步剖析和理解ivar， property）
-1. 动态添加类方法
+
+5. relationship of ivar and object instance size 
+6. relationship of ivar and  property
+7. about kvc 
+		- 他做了什么
+		- 实现机制
 
 
 

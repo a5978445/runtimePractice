@@ -15,6 +15,21 @@
 
 @implementation XFAdder
 
++ (void)load {
+    Method subone = class_getInstanceMethod(self, @selector(subOne:));
+    Method subTwo = class_getInstanceMethod(self, @selector(subTwo:));
+    
+    method_exchangeImplementations(subone, subTwo);
+}
+
+- (NSUInteger)subOne:(NSUInteger)original {
+    return original - 1;
+}
+
+- (NSUInteger)subTwo:(NSUInteger)original {
+    return original - 2;
+}
+
 - (NSUInteger)add:(NSUInteger)original {
     return original + 1;
 }
