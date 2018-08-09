@@ -15,6 +15,12 @@
 @implementation XFADModel {
     
     NSString *_ad_id;
+    
+    __strong NSString *_ad_id_y;
+    
+    __weak NSString *_ad_id_x;
+    
+    __unsafe_unretained NSString *_ad_id_xshd;
 }
 
 - (void)setAd_name:(NSString *)ad_name {

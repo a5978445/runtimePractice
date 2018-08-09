@@ -34,13 +34,17 @@
  @interface HuMan: NSObject
 
 @property(copy, nonatomic) NSString *name;
-
+@property(assign, nonatomic) int age;
 - (void)sayHello:(NSString *)name;
 
 @end
  */
 
+@protocol HuManProtocol
 
+- (void)sayHello:(NSString *)name;
+
+@end
 
 
 
@@ -60,16 +64,29 @@ BOOL registerHuManClass() {
     
 
     BOOL isSuccess = class_addIvar(MyClass, kHuMan_name , sizeof(NSString *), log2(sizeof(NSString *)), "@");
-   // class_addIvar(MyClass, "justTest" , sizeof(NSString *), 64, "@");
     if (!isSuccess) {
         NSLog(@"add %s property failure",kHuMan_name);
         return NO;
     }
+    
+    isSuccess = class_addIvar(MyClass, kHuMan_age , sizeof(int), log2(sizeof(int)), @encode(int));
+    
+    
+    class_addIvar(MyClass, kHuman_isYoung , sizeof(BOOL), log2(sizeof(BOOL)), @encode(BOOL));
+    
+    if (!isSuccess) {
+        NSLog(@"add %s property failure",kHuMan_age);
+        return NO;
+    }
+    
+ 
    
     
     // 3、增加方法
     
     class_addMethod(MyClass, kHuMan_sayHello_sel, (IMP)sayHello, "@@:@");
+    
+    assert(class_addProtocol(MyClass, objc_getProtocol("HuManProtocol")));
     // 通过如下方式，可以避免编译器警告
     /*
      

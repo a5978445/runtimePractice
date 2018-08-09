@@ -25,6 +25,7 @@
 		141385F9211833420053033B /* ForwardInvocationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 141385F8211833420053033B /* ForwardInvocationTests.m */; };
 		141385FC21183EA40053033B /* XFADModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 141385FB21183EA40053033B /* XFADModel.m */; };
 		141385FF21198C620053033B /* DynamicAddPropertyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 141385FE21198C620053033B /* DynamicAddPropertyTests.m */; };
+		14138602211AE8EF0053033B /* HuManPropertyTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 14138601211AE8EF0053033B /* HuManPropertyTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,8 @@
 		141385FA21183EA40053033B /* XFADModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFADModel.h; sourceTree = "<group>"; };
 		141385FB21183EA40053033B /* XFADModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFADModel.m; sourceTree = "<group>"; };
 		141385FE21198C620053033B /* DynamicAddPropertyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DynamicAddPropertyTests.m; sourceTree = "<group>"; };
+		14138600211AE8EF0053033B /* HuManPropertyTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HuManPropertyTool.h; sourceTree = "<group>"; };
+		14138601211AE8EF0053033B /* HuManPropertyTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HuManPropertyTool.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +134,8 @@
 				141159DC2115404200A18DDB /* AppDelegate.m */,
 				141159DE2115404200A18DDB /* ViewController.h */,
 				141159DF2115404200A18DDB /* ViewController.m */,
+				14138600211AE8EF0053033B /* HuManPropertyTool.h */,
+				14138601211AE8EF0053033B /* HuManPropertyTool.m */,
 				141385EB2117E4E90053033B /* XFAdder.h */,
 				141385EC2117E4E90053033B /* XFAdder.m */,
 				141385F4211826DB0053033B /* XFAdderForwardInvocation.h */,
@@ -311,6 +316,7 @@
 			files = (
 				141159E02115404200A18DDB /* ViewController.m in Sources */,
 				141385FC21183EA40053033B /* XFADModel.m in Sources */,
+				14138602211AE8EF0053033B /* HuManPropertyTool.m in Sources */,
 				141159EB2115404400A18DDB /* main.m in Sources */,
 				141385F6211826DB0053033B /* XFAdderForwardInvocation.m in Sources */,
 				14115A122116929800A18DDB /* DynamicCreateHumanClassTool.m in Sources */,

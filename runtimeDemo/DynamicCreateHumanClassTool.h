@@ -7,6 +7,9 @@
 
 #define kHuMan  "XFHuMan"
 #define kHuMan_name  "name"
+#define kHuMan_age  "age"
+#define kHuman_isYoung "young"
+
 #define kHuMan_sayHello_sel sel_getUid("sayHello:")
 
 

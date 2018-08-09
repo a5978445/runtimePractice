@@ -20,6 +20,7 @@
 #import "XFADModel.h"
 #import "DynamicCreateHumanClassTool.h"
 
+#import "HuManPropertyTool.h"
 
 @interface ViewController ()
 
@@ -30,17 +31,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    registerHuManClass();
-    Class Human = objc_lookUpClass(kHuMan);
-    id aHumanObject = [[Human alloc]init];
-    [aHumanObject setValue:@"fitch" forKey:@kHuMan_name];
     
-    Ivar aIvar_HuMan_name = class_getInstanceVariable(Human, kHuMan_name);
-    NSString *result_of_find_ivar = object_getIvar(aHumanObject, aIvar_HuMan_name);
+   HuManPropertyTool *tool = [[HuManPropertyTool alloc]init];
+    [tool test];
     
-    NSString *result_of_find_KVC = [aHumanObject valueForKey:@kHuMan_name];
-    assert([result_of_find_KVC isEqualToString:@"fitch"]);
-    assert([result_of_find_ivar isEqualToString:@"fitch"]);
+
  
 //    NSMutableString *helloString = [[NSMutableString alloc]init];
 //    [helloString appendString:@"hello"];
@@ -58,6 +53,10 @@
     
 
 }
+
+
+
+
 
 
 - (void)didReceiveMemoryWarning {
