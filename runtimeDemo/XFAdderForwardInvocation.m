@@ -34,6 +34,7 @@
 
 // 使用 forwardInvocation 必须override methodSignatureForSelector: 方法，
 // 否则 forwardInvocation 方法不会执行
+// 当你声明支持某个协议的时候，同样会触发消息转发
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector {
   //  return [NSMethodSignature signatureWithObjCTypes:"@@:@"];
     

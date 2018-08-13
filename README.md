@@ -32,6 +32,7 @@ Association(ploicy, value)
 6. relationship of ivar and  property
 7. about kvc 
 		- 他做了什么
+8. about kvo
 		- 实现机制
 
 
