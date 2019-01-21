@@ -19,6 +19,7 @@
     Method subone = class_getInstanceMethod(self, @selector(subOne:));
     Method subTwo = class_getInstanceMethod(self, @selector(subTwo:));
     
+    // 交换 imp
     method_exchangeImplementations(subone, subTwo);
 }
 
@@ -39,7 +40,7 @@
     
     if (sel == sel_getUid("addTwo:")) {
         Class metaClass = objc_getMetaClass(class_getName([self class]));
-        class_addMethod(metaClass, sel, (IMP)addTwo, "@@:@");
+        class_addMethod(metaClass, sel, (IMP)addTwo, "Q@:Q");
         return YES;
     }
     return [super resolveClassMethod:sel];
@@ -47,7 +48,10 @@
 
 + (BOOL)resolveInstanceMethod:(SEL)sel {
     if (sel == sel_getUid("addThree:")) {
-        class_addMethod([self class], sel, (IMP)addThree, "@@:@");
+        
+        NSLog(@"%s",@encode(NSUInteger));
+        
+        class_addMethod([self class], sel, (IMP)addThree, "Q@:Q");
         return YES;
     }
  

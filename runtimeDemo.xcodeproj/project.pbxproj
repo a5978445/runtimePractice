@@ -13,20 +13,19 @@
 		141159E52115404400A18DDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 141159E42115404400A18DDB /* Assets.xcassets */; };
 		141159E82115404400A18DDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 141159E62115404400A18DDB /* LaunchScreen.storyboard */; };
 		141159EB2115404400A18DDB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 141159EA2115404400A18DDB /* main.m */; };
-		141159F52115404400A18DDB /* runtimeDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 141159F42115404400A18DDB /* runtimeDemoTests.m */; };
 		14115A002115404400A18DDB /* runtimeDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 141159FF2115404400A18DDB /* runtimeDemoUITests.m */; };
 		14115A0F2115444900A18DDB /* libobjc.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 14115A0E2115444900A18DDB /* libobjc.tbd */; };
 		14115A122116929800A18DDB /* DynamicCreateHumanClassTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 14115A102116929700A18DDB /* DynamicCreateHumanClassTool.m */; };
 		14115A152116976400A18DDB /* DynamicCreateHumanClassTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 14115A142116976400A18DDB /* DynamicCreateHumanClassTests.m */; };
 		141385ED2117E4E90053033B /* XFAdder.m in Sources */ = {isa = PBXBuildFile; fileRef = 141385EC2117E4E90053033B /* XFAdder.m */; };
-		141385F02117E5AC0053033B /* GetMessageAddressTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 141385EF2117E5AC0053033B /* GetMessageAddressTests.m */; };
-		141385F32117F05A0053033B /* ResolveMethodTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 141385F22117F05A0053033B /* ResolveMethodTests.m */; };
+		141385F02117E5AC0053033B /* GetInstanceImpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 141385EF2117E5AC0053033B /* GetInstanceImpTests.m */; };
+		141385F32117F05A0053033B /* DynamicResolveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 141385F22117F05A0053033B /* DynamicResolveTests.m */; };
 		141385F6211826DB0053033B /* XFAdderForwardInvocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 141385F5211826DB0053033B /* XFAdderForwardInvocation.m */; };
-		141385F9211833420053033B /* ForwardInvocationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 141385F8211833420053033B /* ForwardInvocationTests.m */; };
+		141385F9211833420053033B /* MessageForwardInvocationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 141385F8211833420053033B /* MessageForwardInvocationTests.m */; };
 		141385FC21183EA40053033B /* XFADModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 141385FB21183EA40053033B /* XFADModel.m */; };
 		141385FF21198C620053033B /* DynamicAddPropertyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 141385FE21198C620053033B /* DynamicAddPropertyTests.m */; };
 		14138602211AE8EF0053033B /* HuManPropertyTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 14138601211AE8EF0053033B /* HuManPropertyTool.m */; };
-		14138605211C368A0053033B /* DerivedClassTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 14138604211C368A0053033B /* DerivedClassTests.m */; };
+		14138605211C368A0053033B /* DerivedClassValidateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 14138604211C368A0053033B /* DerivedClassValidateTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +57,6 @@
 		141159E92115404400A18DDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		141159EA2115404400A18DDB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		141159F02115404400A18DDB /* runtimeDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = runtimeDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		141159F42115404400A18DDB /* runtimeDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = runtimeDemoTests.m; sourceTree = "<group>"; };
 		141159F62115404400A18DDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		141159FB2115404400A18DDB /* runtimeDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = runtimeDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		141159FF2115404400A18DDB /* runtimeDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = runtimeDemoUITests.m; sourceTree = "<group>"; };
@@ -69,17 +67,17 @@
 		14115A142116976400A18DDB /* DynamicCreateHumanClassTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DynamicCreateHumanClassTests.m; sourceTree = "<group>"; };
 		141385EB2117E4E90053033B /* XFAdder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XFAdder.h; sourceTree = "<group>"; };
 		141385EC2117E4E90053033B /* XFAdder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XFAdder.m; sourceTree = "<group>"; };
-		141385EF2117E5AC0053033B /* GetMessageAddressTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetMessageAddressTests.m; sourceTree = "<group>"; };
-		141385F22117F05A0053033B /* ResolveMethodTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResolveMethodTests.m; sourceTree = "<group>"; };
+		141385EF2117E5AC0053033B /* GetInstanceImpTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetInstanceImpTests.m; sourceTree = "<group>"; };
+		141385F22117F05A0053033B /* DynamicResolveTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DynamicResolveTests.m; sourceTree = "<group>"; };
 		141385F4211826DB0053033B /* XFAdderForwardInvocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XFAdderForwardInvocation.h; sourceTree = "<group>"; };
 		141385F5211826DB0053033B /* XFAdderForwardInvocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XFAdderForwardInvocation.m; sourceTree = "<group>"; };
-		141385F8211833420053033B /* ForwardInvocationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForwardInvocationTests.m; sourceTree = "<group>"; };
+		141385F8211833420053033B /* MessageForwardInvocationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageForwardInvocationTests.m; sourceTree = "<group>"; };
 		141385FA21183EA40053033B /* XFADModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFADModel.h; sourceTree = "<group>"; };
 		141385FB21183EA40053033B /* XFADModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFADModel.m; sourceTree = "<group>"; };
 		141385FE21198C620053033B /* DynamicAddPropertyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DynamicAddPropertyTests.m; sourceTree = "<group>"; };
 		14138600211AE8EF0053033B /* HuManPropertyTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HuManPropertyTool.h; sourceTree = "<group>"; };
 		14138601211AE8EF0053033B /* HuManPropertyTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HuManPropertyTool.m; sourceTree = "<group>"; };
-		14138604211C368A0053033B /* DerivedClassTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DerivedClassTests.m; sourceTree = "<group>"; };
+		14138604211C368A0053033B /* DerivedClassValidateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DerivedClassValidateTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,25 +130,9 @@
 		141159DA2115404200A18DDB /* runtimeDemo */ = {
 			isa = PBXGroup;
 			children = (
-				141159DB2115404200A18DDB /* AppDelegate.h */,
-				141159DC2115404200A18DDB /* AppDelegate.m */,
-				141159DE2115404200A18DDB /* ViewController.h */,
-				141159DF2115404200A18DDB /* ViewController.m */,
-				14138600211AE8EF0053033B /* HuManPropertyTool.h */,
-				14138601211AE8EF0053033B /* HuManPropertyTool.m */,
-				141385EB2117E4E90053033B /* XFAdder.h */,
-				141385EC2117E4E90053033B /* XFAdder.m */,
-				141385F4211826DB0053033B /* XFAdderForwardInvocation.h */,
-				141385F5211826DB0053033B /* XFAdderForwardInvocation.m */,
-				141385FA21183EA40053033B /* XFADModel.h */,
-				141385FB21183EA40053033B /* XFADModel.m */,
-				14115A112116929700A18DDB /* DynamicCreateHumanClassTool.h */,
-				14115A102116929700A18DDB /* DynamicCreateHumanClassTool.m */,
-				141159E12115404200A18DDB /* Main.storyboard */,
-				141159E42115404400A18DDB /* Assets.xcassets */,
-				141159E62115404400A18DDB /* LaunchScreen.storyboard */,
-				141159E92115404400A18DDB /* Info.plist */,
-				141159EA2115404400A18DDB /* main.m */,
+				146E75BA21F6B088009CAB01 /* cocoa */,
+				146E75B821F5B469009CAB01 /* DynamicCreateClass */,
+				146E75B921F5C0E7009CAB01 /* Model */,
 			);
 			path = runtimeDemo;
 			sourceTree = "<group>";
@@ -158,14 +140,13 @@
 		141159F32115404400A18DDB /* runtimeDemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				141159F42115404400A18DDB /* runtimeDemoTests.m */,
-				14115A142116976400A18DDB /* DynamicCreateHumanClassTests.m */,
-				141385EF2117E5AC0053033B /* GetMessageAddressTests.m */,
-				141385F22117F05A0053033B /* ResolveMethodTests.m */,
-				141385F8211833420053033B /* ForwardInvocationTests.m */,
+				14138604211C368A0053033B /* DerivedClassValidateTests.m */,
 				141385FE21198C620053033B /* DynamicAddPropertyTests.m */,
+				14115A142116976400A18DDB /* DynamicCreateHumanClassTests.m */,
+				141385F22117F05A0053033B /* DynamicResolveTests.m */,
+				141385EF2117E5AC0053033B /* GetInstanceImpTests.m */,
+				141385F8211833420053033B /* MessageForwardInvocationTests.m */,
 				141159F62115404400A18DDB /* Info.plist */,
-				14138604211C368A0053033B /* DerivedClassTests.m */,
 			);
 			path = runtimeDemoTests;
 			sourceTree = "<group>";
@@ -185,6 +166,46 @@
 				14115A0E2115444900A18DDB /* libobjc.tbd */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		146E75B821F5B469009CAB01 /* DynamicCreateClass */ = {
+			isa = PBXGroup;
+			children = (
+				14115A112116929700A18DDB /* DynamicCreateHumanClassTool.h */,
+				14115A102116929700A18DDB /* DynamicCreateHumanClassTool.m */,
+			);
+			path = DynamicCreateClass;
+			sourceTree = "<group>";
+		};
+		146E75B921F5C0E7009CAB01 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				141385EB2117E4E90053033B /* XFAdder.h */,
+				141385EC2117E4E90053033B /* XFAdder.m */,
+				141385F4211826DB0053033B /* XFAdderForwardInvocation.h */,
+				141385F5211826DB0053033B /* XFAdderForwardInvocation.m */,
+				141385FA21183EA40053033B /* XFADModel.h */,
+				141385FB21183EA40053033B /* XFADModel.m */,
+				14138600211AE8EF0053033B /* HuManPropertyTool.h */,
+				14138601211AE8EF0053033B /* HuManPropertyTool.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		146E75BA21F6B088009CAB01 /* cocoa */ = {
+			isa = PBXGroup;
+			children = (
+				141159E42115404400A18DDB /* Assets.xcassets */,
+				141159DB2115404200A18DDB /* AppDelegate.h */,
+				141159DC2115404200A18DDB /* AppDelegate.m */,
+				141159E92115404400A18DDB /* Info.plist */,
+				141159E62115404400A18DDB /* LaunchScreen.storyboard */,
+				141159EA2115404400A18DDB /* main.m */,
+				141159E12115404200A18DDB /* Main.storyboard */,
+				141159DE2115404200A18DDB /* ViewController.h */,
+				141159DF2115404200A18DDB /* ViewController.m */,
+			);
+			path = cocoa;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,12 +354,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				141385FF21198C620053033B /* DynamicAddPropertyTests.m in Sources */,
-				141385F02117E5AC0053033B /* GetMessageAddressTests.m in Sources */,
-				14138605211C368A0053033B /* DerivedClassTests.m in Sources */,
+				141385F02117E5AC0053033B /* GetInstanceImpTests.m in Sources */,
+				14138605211C368A0053033B /* DerivedClassValidateTests.m in Sources */,
 				14115A152116976400A18DDB /* DynamicCreateHumanClassTests.m in Sources */,
-				141385F9211833420053033B /* ForwardInvocationTests.m in Sources */,
-				141159F52115404400A18DDB /* runtimeDemoTests.m in Sources */,
-				141385F32117F05A0053033B /* ResolveMethodTests.m in Sources */,
+				141385F9211833420053033B /* MessageForwardInvocationTests.m in Sources */,
+				141385F32117F05A0053033B /* DynamicResolveTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

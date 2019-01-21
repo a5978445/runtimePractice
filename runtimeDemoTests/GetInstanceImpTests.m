@@ -10,11 +10,11 @@
 #import "XFAdder.h"
 #import <objc/runtime.h>
 
-@interface GetMessageAddressTests : XCTestCase
+@interface GetInstanceImpTests : XCTestCase
 
 @end
 
-@implementation GetMessageAddressTests
+@implementation GetInstanceImpTests
 
 - (void)setUp {
     [super setUp];
@@ -27,7 +27,8 @@
 }
 
 
-- (void)testGettingMethodAddress {
+- (void)testGetInstanceImp {
+    // 声明函数指针，等价于imp
     NSUInteger (*setter)(id, SEL, NSUInteger);
     XFAdder *adder = [[XFAdder alloc]init];
     

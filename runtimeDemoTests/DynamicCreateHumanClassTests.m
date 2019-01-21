@@ -29,7 +29,7 @@
     disposeClass();
 }
 
-- (void)testregisterHuManClass {
+- (void)testRegisterHuManClass {
     disposeClass();
     assert(registerHuManClass() == YES);
     assert(registerHuManClass() == NO);
@@ -64,19 +64,18 @@
     assert(huManClass != NULL);
     
     
+    id aHuMan = [[huManClass alloc]init];
+    [aHuMan setValue:@"Fitch" forKey:@kHuMan_name];
+    
+    
     /*
      // equivalent:
      id myobjc = objc_msgSend(MyClass, @selector(alloc));
      myobjc = objc_msgSend(myobjc, @selector(init));
+     //objc_msgSend(myobjc, @selector(addMethodForMyClass:), @"hello boy");
      需要做一下设置，否则编译器会报错  Build Settings -->  搜索 objc --> 设置 Enable Strict Checking of objc-msgSend Calls    为 NO
-     
-     
      */
-    id aHuMan = [[huManClass alloc]init];
-    [aHuMan setValue:@"Fitch" forKey:@kHuMan_name];
     
-    //equivalent:
-    //objc_msgSend(myobjc, @selector(addMethodForMyClass:), @"hello boy");
     NSString *result = (NSString *)[aHuMan performSelector:kHuMan_sayHello_sel withObject:@"Neil"];
     XCTAssert([result isEqualToString:@"Fitch: hello Neil"]);
     

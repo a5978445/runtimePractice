@@ -1,5 +1,5 @@
 //
-//  ResolveMethodTests.m
+//  ForwardInvocationTests.m
 //  runtimeDemoTests
 //
 //  Created by 李腾芳 on 2018/8/6.
@@ -7,15 +7,14 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "XFAdder.h"
+#import "XFAdderForwardInvocation.h"
 #import <objc/runtime.h>
-#import <objc/message.h>
 
-@interface ResolveMethodTests : XCTestCase
+@interface MessageForwardInvocationTests : XCTestCase
 
 @end
 
-@implementation ResolveMethodTests
+@implementation MessageForwardInvocationTests
 
 - (void)setUp {
     [super setUp];
@@ -27,16 +26,18 @@
     [super tearDown];
 }
 
-- (void)testResolveClassMethod {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
-    NSUInteger result = (NSUInteger)objc_msgSend([XFAdder class], @selector(addTwo:),12);
-    XCTAssert(result == 14);
-}
-
-- (void)testResolveInstanceMethod {
-    NSUInteger result = (NSUInteger)objc_msgSend([[XFAdder alloc]init], @selector(addThree:),12);
+- (void)testForwardInvocation {
+  
+    
+    XFAdderForwardInvocation *aAdderForwardInvocation = [[XFAdderForwardInvocation alloc]init];
+    
+    XCTAssert(![aAdderForwardInvocation respondsToSelector:@selector(addThree:)]);
+    
+    NSUInteger result = [aAdderForwardInvocation addThree:12];
+    
     XCTAssert(result == 15);
+    
+    
 }
 
 - (void)testPerformanceExample {
@@ -45,5 +46,6 @@
         // Put the code you want to measure the time of here.
     }];
 }
+
 
 @end

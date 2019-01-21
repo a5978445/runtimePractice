@@ -1,18 +1,21 @@
 //
-//  runtimeDemoTests.m
+//  ResolveMethodTests.m
 //  runtimeDemoTests
 //
-//  Created by 李腾芳 on 2018/8/4.
+//  Created by 李腾芳 on 2018/8/6.
 //  Copyright © 2018年 李腾芳. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
+#import "XFAdder.h"
+#import <objc/runtime.h>
+#import <objc/message.h>
 
-@interface runtimeDemoTests : XCTestCase
+@interface DynamicResolveTests : XCTestCase
 
 @end
 
-@implementation runtimeDemoTests
+@implementation DynamicResolveTests
 
 - (void)setUp {
     [super setUp];
@@ -24,9 +27,16 @@
     [super tearDown];
 }
 
-- (void)testExample {
+- (void)testDynamicResolveClassMethod {
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
+    NSUInteger result = (NSUInteger)objc_msgSend([XFAdder class], @selector(addTwo:),12);
+    XCTAssert(result == 14);
+}
+
+- (void)testDynamicResolveInstanceMethod {
+    NSUInteger result = (NSUInteger)objc_msgSend([[XFAdder alloc]init], @selector(addThree:),12);
+    XCTAssert(result == 15);
 }
 
 - (void)testPerformanceExample {

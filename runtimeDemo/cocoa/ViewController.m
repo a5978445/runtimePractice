@@ -34,7 +34,7 @@
     Method customViewDidLoad = class_getInstanceMethod(self, @selector(customViewDidLoad));
     Method viewDidload = class_getInstanceMethod(self,@selector(viewDidLoad));
     
-    method_exchangeImplementations(customViewDidLoad, viewDidload);
+   // method_exchangeImplementations(customViewDidLoad, viewDidload);
 }
 
 - (void)customViewDidLoad {
@@ -45,8 +45,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // 这个不会触发动态决议
+   // SEL addTwoSEL = sel_getUid("addTwo:");
+   // [[XFAdder new] performSelector:addTwoSEL withObject:@(3)];
     
-
+      NSUInteger result = (NSUInteger)objc_msgSend([XFAdder class], @selector(addTwo:),12);
+    unsigned int count;
+    Method *methodList = class_copyMethodList(XFAdder.class, &count);
+    for (int i = 0; i < count; i++) {
+        NSLog(@"%s", sel_getName(method_getName(methodList[i])));
+        
+        struct objc_method_description *p = method_getDescription(methodList[i]);
+        NSLog(@"%s", method_getTypeEncoding(methodList[i]));
+        NSLog(@"%s",p->types);
+        
+        
+     //   method_getTypeEncoding(mt)
+        
+    }
     
     
     
